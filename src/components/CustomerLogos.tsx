@@ -3,12 +3,12 @@ import React, { useRef, useEffect, useState } from "react";
 
 // Client images
 const customers = [
-  { name: "client1", logo: "/client/ASSET MOCKUP_client 1.png" },
-  { name: "client2", logo: "/client/ASSET MOCKUP_client 2.png" },
-  { name: "client3", logo: "/client/ASSET MOCKUP_client 3.png" },
-  { name: "client4", logo: "/client/ASSET MOCKUP_client 4.png" },
-  { name: "client5", logo: "/client/ASSET MOCKUP_client 5.png" },
-  { name: "client6", logo: "/client/ASSET MOCKUP_client 6.png" },
+  { name: "client1", logo: "/client/ASSET_MOCKUP_client_1.png" },
+  { name: "client2", logo: "/client/ASSET_MOCKUP_client_2.png" },
+  { name: "client3", logo: "/client/ASSET_MOCKUP_client_3.png" },
+  { name: "client4", logo: "/client/ASSET_MOCKUP_client_4.png" },
+  { name: "client5", logo: "/client/ASSET_MOCKUP_client_5.png" },
+  { name: "client6", logo: "/client/ASSET_MOCKUP_client_6.png" },
 ];
 
 export default function CustomerLogos() {

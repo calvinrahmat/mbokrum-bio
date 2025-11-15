@@ -4,7 +4,7 @@ const ProfileHeader: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
       {/* Logo - Portrait for both mobile and desktop */}
-      <div className="w-32 h-32 md:w-40 md:h-40 relative mb-4">
+      <div className="w-32 h-32 md:w-60 md:h-60 relative mb-4">
         <Image
           src="/logo_portrait.png"
           alt="Mbokrum Logo"
