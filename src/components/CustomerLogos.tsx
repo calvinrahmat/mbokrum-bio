@@ -45,7 +45,7 @@ export default function CustomerLogos() {
 
   // If we have a rowWidth, we can show the content
   if (isLoading && !rowWidth) {
-    return <div className="w-full h-[140px] md:h-[160px] flex items-center justify-center">
+    return <div className="w-full h-[100px] md:h-[160px] flex items-center justify-center">
       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
     </div>;
   }
@@ -69,7 +69,7 @@ export default function CustomerLogos() {
           {logos.map((customer, index) => (
             <div
               key={`${customer.name}-${index}`}
-              className="flex-shrink-0 w-[140px] h-[140px] md:w-[160px] md:h-[160px] flex items-center justify-center bg-white p-4 md:p-5 rounded-lg"
+              className="flex-shrink-0 w-[100px] h-[100px] md:w-[160px] md:h-[160px] flex items-center justify-center bg-white p-2 md:p-5 rounded-lg"
               style={{
                 willChange: 'transform',
                 transform: 'translateZ(0)',
@@ -79,7 +79,7 @@ export default function CustomerLogos() {
               <img
                 src={encodeURI(customer.logo)}
                 alt={`${customer.name} logo`}
-                className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] object-contain"
+                className="w-[70px] h-[70px] md:w-[120px] md:h-[120px] object-contain"
                 loading="lazy"
                 onLoad={() => {
                   if (rowRef.current && !rowWidth) {
