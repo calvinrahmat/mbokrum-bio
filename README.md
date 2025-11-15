@@ -79,3 +79,4 @@ mbokrum/
 - Lucide React (for icons)
 
 # mbokrum-bio
+# allgaleri
