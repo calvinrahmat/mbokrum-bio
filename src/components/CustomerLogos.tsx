@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import Image from "next/image";
 
 // Client images
 const customers = [
@@ -77,17 +76,18 @@ export default function CustomerLogos() {
                 backfaceVisibility: 'hidden'
               }}
             >
-              <Image
+              <img
                 src={customer.logo}
                 alt={`${customer.name} logo`}
-                width={120}
-                height={120}
                 className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] object-contain"
                 loading="lazy"
                 onLoad={() => {
                   if (rowRef.current && !rowWidth) {
                     setRowWidth(rowRef.current.scrollWidth / 2);
                   }
+                }}
+                onError={(e) => {
+                  console.error(`Failed to load image: ${customer.logo}`, e);
                 }}
               />
             </div>
