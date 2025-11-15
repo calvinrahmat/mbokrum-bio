@@ -85,7 +85,7 @@ const Index = () => {
               
               <LinkButton 
                 href={whatsappUrl}
-                className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg animate-bounce"
+                className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-800 shadow-md hover:shadow-lg animate-bounce"
                 icon={<MessageCircle className="h-5 w-5" />}
               >
                 ORDER DISINI!
