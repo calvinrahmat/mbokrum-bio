@@ -77,7 +77,7 @@ export default function CustomerLogos() {
               }}
             >
               <img
-                src={customer.logo}
+                src={encodeURI(customer.logo)}
                 alt={`${customer.name} logo`}
                 className="w-[100px] h-[100px] md:w-[120px] md:h-[120px] object-contain"
                 loading="lazy"
@@ -88,6 +88,11 @@ export default function CustomerLogos() {
                 }}
                 onError={(e) => {
                   console.error(`Failed to load image: ${customer.logo}`, e);
+                  // Try without encoding as fallback
+                  const img = e.currentTarget;
+                  if (!img.src.includes('%20')) {
+                    img.src = customer.logo;
+                  }
                 }}
               />
             </div>
