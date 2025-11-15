@@ -28,11 +28,22 @@ This project is configured to deploy to Cloudflare Pages using the `@cloudflare/
    - **Build output directory**: `.vercel/output/static`
    - **Root directory**: `/` (leave as default)
 
-4. **Environment Variables** (if needed)
+4. **Set Compatibility Flag (IMPORTANT)**
+   - After creating the project, go to **Settings** → **Functions**
+   - Scroll down to **Compatibility flags**
+   - Add `nodejs_compat` to the compatibility flags
+   - Click **Save**
+
+   **Alternative method:**
+   - Go to **Settings** → **Environment variables**
+   - In the **Compatibility flags** section, add `nodejs_compat`
+   - Save the changes
+
+5. **Environment Variables** (if needed)
    - Add any environment variables your app requires
    - For this project, none are required
 
-5. **Deploy**
+6. **Deploy**
    - Click **Save and Deploy**
    - Cloudflare will automatically build and deploy your site
    - Your site will be available at `https://mbokrum.pages.dev` (or your custom domain)
@@ -95,6 +106,12 @@ Once connected to GitHub, Cloudflare Pages will automatically:
 ### Runtime Errors
 - Check browser console for errors
 - Review Cloudflare Pages function logs in the dashboard
+
+### "no nodejs_compat compatibility flag set" Error
+- This error occurs when the `nodejs_compat` flag is not set
+- **Fix**: Go to your Cloudflare Pages project → **Settings** → **Functions**
+- Scroll to **Compatibility flags** and add `nodejs_compat`
+- Save and redeploy your project
 
 ## Local Development
 
