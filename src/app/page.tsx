@@ -23,6 +23,7 @@ const Index = () => {
           fill
           className="object-cover md:hidden"
           priority
+          unoptimized={true}
         />
         <Image
           src="/bg_landscape.png"
@@ -30,6 +31,7 @@ const Index = () => {
           fill
           className="object-cover hidden md:block"
           priority
+          unoptimized={true}
         />
       </div>
 

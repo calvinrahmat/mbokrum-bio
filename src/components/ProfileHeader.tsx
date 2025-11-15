@@ -11,6 +11,7 @@ const ProfileHeader: React.FC = () => {
           fill
           className="object-contain"
           priority
+          unoptimized={true}
         />
       </div>
       <p className="text-center max-w-md text-white/90 mb-4 text-base md:text-xl" style={{ fontFamily: 'Philosopher, serif' }}>
