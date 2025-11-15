@@ -113,6 +113,20 @@ Once connected to GitHub, Cloudflare Pages will automatically:
 - Scroll to **Compatibility flags** and add `nodejs_compat`
 - Save and redeploy your project
 
+### 500 Internal Server Error
+- **Common causes:**
+  1. **Image optimization**: Next.js Image component optimization doesn't work on Cloudflare Pages
+     - **Fix**: Already configured in `next.config.mjs` with `unoptimized: true`
+  2. **Edge runtime conflicts**: Explicit edge runtime export may cause issues
+     - **Fix**: Removed from page components (Cloudflare adapter handles this automatically)
+  3. **Missing compatibility flags**: Ensure `nodejs_compat` is set (see above)
+  4. **Build errors**: Check build logs in Cloudflare Pages dashboard
+- **Debugging steps:**
+  1. Check the deployment logs in Cloudflare Pages dashboard
+  2. Look for specific error messages in the function logs
+  3. Test locally with `npm run build:cf && wrangler pages dev .vercel/output/static`
+  4. Check browser console for client-side errors
+
 ## Local Development
 
 To test the Cloudflare Pages build locally:
