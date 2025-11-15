@@ -2,6 +2,9 @@
 const nextConfig = {
   images: {
     remotePatterns: [],
+    // Disable image optimization for Cloudflare Pages
+    // Cloudflare Pages doesn't support Next.js image optimization
+    unoptimized: true,
   },
 };
 
