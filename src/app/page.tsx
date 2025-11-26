@@ -6,12 +6,22 @@ import LinkButton from '@/components/LinkButton';
 import ProfileHeader from '@/components/ProfileHeader';
 import { Card } from '@/components/ui/card';
 import CustomerLogos from '@/components/CustomerLogos';
-import { Utensils, Globe, Building2, MapPin, MessageCircle, Instagram } from 'lucide-react';
+import { Utensils, Globe, Building2, MapPin, MessageCircle, Instagram, Music } from 'lucide-react';
+
+// Simple TikTok icon component
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
 
 const Index = () => {
-  const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(
-    "Hello! I'm interested in learning more."
-  )}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=6281219598012&text=Hi%20Mbok!%20Saya%20tertarik%20dengan%20produk%20Mbok%20Rum%2C%20boleh%20tanya-tanya%3F&fbclid=PARlRTSAOKH_JleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeAgmWtSzWtyFBFgWYxvyPCKyyeb6B_uRLsC6JSosYVDHjLOmsn3k4z3UWayg_aem_BLm8dLbgcVuMi_MCbZE4tw`;
 
   return (
     <div className="relative min-h-screen">
@@ -69,18 +79,20 @@ const Index = () => {
                 Website
               </LinkButton>
               
-              <LinkButton 
-                href="https://example.com/about"
-                icon={<Building2 className="h-5 w-5" />}
-              >
-                Company Profile
-              </LinkButton>
+          
               
               <LinkButton 
                 href="https://maps.app.goo.gl/ZZ5A5LCAij8RnnAp7"
                 icon={<MapPin className="h-5 w-5" />}
               >
                 Lokasi Outlet
+              </LinkButton>
+              
+              <LinkButton 
+                href="https://maps.app.goo.gl/apRwaCx3UJa6Zyhx6?g_st=ipc"
+                icon={<MapPin className="h-5 w-5" />}
+              >
+                Lokasi Dapur
               </LinkButton>
               
               <LinkButton 
@@ -114,15 +126,25 @@ const Index = () => {
               Jl. Taman Palem Lestari No.19 RT.7/RW.8 Cengkareng Barat 111730
             </p>
             
-            {/* Instagram Icon */}
-            <a 
-              href="https://instagram.com/mbokrum" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <Instagram className="w-8 h-8" />
-            </a>
+            {/* Social Media Icons */}
+            <div className="flex items-center space-x-4">
+              <a 
+                href="https://www.instagram.com/mbokrum?igsh=MWlycWZuM3JqZTYxdg==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Instagram className="w-8 h-8" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@nasikuning.mbokrum?_r=1&_t=ZS-91WHnaqWK0u" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <TikTokIcon className="w-8 h-8" />
+              </a>
+            </div>
             
             {/* White Line */}
             <div className="w-full h-px bg-white/30 my-2" />
@@ -151,15 +173,25 @@ const Index = () => {
               Jl. Taman Palem Lestari No.19 RT.7/RW.8 Cengkareng Barat 111730
             </p>
             
-            {/* Instagram - Right */}
-            <a 
-              href="https://instagram.com/mbokrum" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity flex-shrink-0"
-            >
-              <Instagram className="w-8 h-8" />
-            </a>
+            {/* Social Media Icons - Right */}
+            <div className="flex items-center space-x-4 flex-shrink-0">
+              <a 
+                href="https://www.instagram.com/mbokrum?igsh=MWlycWZuM3JqZTYxdg==" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <Instagram className="w-8 h-8" />
+              </a>
+              <a 
+                href="https://www.tiktok.com/@nasikuning.mbokrum?_r=1&_t=ZS-91WHnaqWK0u" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <TikTokIcon className="w-8 h-8" />
+              </a>
+            </div>
           </div>
 
           {/* Desktop: White Line and Copyright - Full width */}
