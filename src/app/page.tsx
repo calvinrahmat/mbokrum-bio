@@ -71,14 +71,7 @@ const Index = () => {
                 href="https://example.com/services"
                 icon={<Utensils className="h-5 w-5" />}
               >
-                Services
-              </LinkButton>
-              
-              <LinkButton 
-                href="https://example.com"
-                icon={<Globe className="h-5 w-5" />}
-              >
-                Website
+                Food Menu & Pricelist
               </LinkButton>
               
           
