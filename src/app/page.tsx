@@ -7,6 +7,7 @@ import ProfileHeader from '@/components/ProfileHeader';
 import { Card } from '@/components/ui/card';
 import CustomerLogos from '@/components/CustomerLogos';
 import { Utensils, Globe, Building2, MapPin, MessageCircle, Instagram, Music } from 'lucide-react';
+import { trackLead, trackMenuView, trackLocationClick, trackSocialClick } from '@/lib/facebook-pixel';
 
 // Simple TikTok icon component
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -61,6 +62,7 @@ const Index = () => {
               <LinkButton 
                 href="https://example.com/menu"
                 icon={<Utensils className="h-5 w-5" />}
+                onClick={() => trackMenuView()}
               >
                 Menu
               </LinkButton>
@@ -84,6 +86,7 @@ const Index = () => {
               <LinkButton 
                 href="https://maps.app.goo.gl/ZZ5A5LCAij8RnnAp7"
                 icon={<MapPin className="h-5 w-5" />}
+                onClick={() => trackLocationClick('outlet')}
               >
                 Lokasi Outlet
               </LinkButton>
@@ -91,6 +94,7 @@ const Index = () => {
               <LinkButton 
                 href="https://maps.app.goo.gl/apRwaCx3UJa6Zyhx6?g_st=ipc"
                 icon={<MapPin className="h-5 w-5" />}
+                onClick={() => trackLocationClick('dapur')}
               >
                 Lokasi Dapur
               </LinkButton>
@@ -99,6 +103,7 @@ const Index = () => {
                 href={whatsappUrl}
                 className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-800 shadow-md hover:shadow-lg animate-bounce"
                 icon={<MessageCircle className="h-5 w-5" />}
+                onClick={() => trackLead('whatsapp_button')}
               >
                 ORDER DISINI!
               </LinkButton>
@@ -133,6 +138,7 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
+                onClick={() => trackSocialClick('instagram')}
               >
                 <Instagram className="w-8 h-8" />
               </a>
@@ -141,6 +147,7 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
+                onClick={() => trackSocialClick('tiktok')}
               >
                 <TikTokIcon className="w-8 h-8" />
               </a>
@@ -180,6 +187,7 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
+                onClick={() => trackSocialClick('instagram')}
               >
                 <Instagram className="w-8 h-8" />
               </a>
@@ -188,6 +196,7 @@ const Index = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:opacity-80 transition-opacity"
+                onClick={() => trackSocialClick('tiktok')}
               >
                 <TikTokIcon className="w-8 h-8" />
               </a>

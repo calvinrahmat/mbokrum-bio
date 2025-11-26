@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MetaPixel from "@/components/MetaPixel";
 
 export const metadata: Metadata = {
   title: "Mbokrum - Linktree Page",
@@ -11,9 +12,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
+
   return (
     <html lang="en">
-      <body style={{ fontFamily: 'DM Sans, sans-serif' }}>{children}</body>
+      <body style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        {pixelId && <MetaPixel pixelId={pixelId} />}
+        {children}
+      </body>
     </html>
   );
 }
