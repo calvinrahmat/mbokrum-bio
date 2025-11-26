@@ -2,7 +2,14 @@
 
 declare global {
   interface Window {
-    fbq: (...args: any[]) => void;
+    fbq: {
+      (...args: any[]): void;
+      loaded?: boolean;
+      version?: string;
+      queue?: any[];
+      callMethod?: (...args: any[]) => void;
+      push?: (...args: any[]) => void;
+    };
   }
 }
 
