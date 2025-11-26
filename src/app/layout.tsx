@@ -12,12 +12,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
-
   return (
     <html lang="en">
       <body style={{ fontFamily: 'DM Sans, sans-serif' }}>
-        {pixelId && <MetaPixel pixelId={pixelId} />}
+        <MetaPixel pixelId="925593398355227" />
         {children}
       </body>
     </html>
