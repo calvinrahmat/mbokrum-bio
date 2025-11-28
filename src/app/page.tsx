@@ -59,13 +59,7 @@ const Index = () => {
               <CustomerLogos />
             </div>
             <div className="flex flex-col space-y-2 mt-8">
-              <LinkButton 
-                href="https://example.com/menu"
-                icon={<Utensils className="h-5 w-5" />}
-                onClick={() => trackMenuView()}
-              >
-                Menu
-              </LinkButton>
+          
               
               <LinkButton 
                 href="https://drive.google.com/file/d/1BY3U6jGJKwczZQPcN1R4B8HFMKWVQ6Y2/view?usp=sharing"
@@ -74,23 +68,8 @@ const Index = () => {
                 Menu & Pricelist
               </LinkButton>
               
-          
               
-              <LinkButton 
-                href="https://maps.app.goo.gl/ZZ5A5LCAij8RnnAp7"
-                icon={<MapPin className="h-5 w-5" />}
-                onClick={() => trackLocationClick('outlet')}
-              >
-                Lokasi Outlet
-              </LinkButton>
-              
-              <LinkButton 
-                href="https://maps.app.goo.gl/apRwaCx3UJa6Zyhx6?g_st=ipc"
-                icon={<MapPin className="h-5 w-5" />}
-                onClick={() => trackLocationClick('dapur')}
-              >
-                Lokasi Dapur
-              </LinkButton>
+    
               
               <LinkButton 
                 href={whatsappUrl}
@@ -121,7 +100,7 @@ const Index = () => {
             
             {/* Address */}
             <p className="text-center text-sm w-[300px]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Jl. Taman Palem Lestari No.19 RT.7/RW.8 Cengkareng Barat 111730
+            Blk. C - Jl. Komp. Perumahan DPR - RI No. 25 Kel. Joglo // Kec. Kembangan RT 10 RW 01 Kembangan, Jakarta Raya, Indonesia
             </p>
             
             {/* Social Media Icons */}
