@@ -4,7 +4,7 @@ import MetaPixel from "@/components/MetaPixel";
 
 export const metadata: Metadata = {
   title: "Mbokrum - Linktree Page",
-  description: "Mbokrum hadir membawa hidangan praktis penuh cita rasa untuk melengkapi setiap acara spesial kalian!",
+  description: "Satu Makanan Untuk Berbagai Acara!",
 };
 
 export default function RootLayout({

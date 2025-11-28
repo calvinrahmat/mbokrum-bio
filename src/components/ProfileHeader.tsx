@@ -15,7 +15,7 @@ const ProfileHeader: React.FC = () => {
         />
       </div>
       <p className="text-center max-w-md text-white/90 mb-4 text-base md:text-xl" style={{ fontFamily: 'Philosopher, serif' }}>
-        Mbokrum hadir membawa hidangan praktis penuh cita rasa untuk melengkapi setiap acara spesial kalian!
+        Satu Makanan Untuk Berbagai Acara!
       </p>
     </div>
   );
