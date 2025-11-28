@@ -68,10 +68,10 @@ const Index = () => {
               </LinkButton>
               
               <LinkButton 
-                href="https://example.com/services"
+                href="https://drive.google.com/file/d/1BY3U6jGJKwczZQPcN1R4B8HFMKWVQ6Y2/view?usp=sharing"
                 icon={<Utensils className="h-5 w-5" />}
               >
-                Food Menu & Pricelist
+                Menu & Pricelist
               </LinkButton>
               
           
