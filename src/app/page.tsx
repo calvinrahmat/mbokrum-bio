@@ -149,7 +149,7 @@ const Index = () => {
             
             {/* Address - Center */}
             <p className="text-center text-xl flex-1 max-w-[400px] mr-24 " style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Jl. Taman Palem Lestari No.19 RT.7/RW.8 Cengkareng Barat 111730
+            Blk. C - Jl. Komp. Perumahan DPR - RI No. 25 Kel. Joglo // Kec. Kembangan RT 10 RW 01 Kembangan, Jakarta Raya, Indonesia
             </p>
             
             {/* Social Media Icons - Right */}
